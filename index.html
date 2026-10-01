@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Pludy Timer</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div id="app" class="app state-start">
+
+  <div class="stage">
+    <div id="morphBtn" class="morph">
+      <span id="morphLabel" class="label">START</span>
+    </div>
+  </div>
+
+  <div class="options">
+    <button id="normalBtn" class="option-btn" data-seconds="180">NORMAL</button>
+    <button id="quickBtn" class="option-btn" data-seconds="150">QUICK</button>
+  </div>
+
+  <div class="top-controls">
+    <button id="pauseBtn" class="icon-btn" aria-label="Pausar">
+      <svg id="pauseIcon" viewBox="0 0 24 24" fill="#111111"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+    </button>
+    <button id="stopBtn" class="icon-btn" aria-label="Detener">
+      <svg viewBox="0 0 24 24" fill="#111111"><rect x="5" y="5" width="14" height="14" rx="2"/></svg>
+    </button>
+  </div>
+
+  <div class="scoreboard">
+    <div class="score-card dulce">
+      <div class="score-label">Team Dulce</div>
+      <div id="dulceScoreEl" class="score-value">0</div>
+      <div class="score-controls">
+        <button id="dulceMinus" class="score-btn" aria-label="Restar punto a Team Dulce">−</button>
+        <button id="dulcePlus" class="score-btn" aria-label="Sumar punto a Team Dulce">+</button>
+      </div>
+    </div>
+    <div class="score-card peluche">
+      <div class="score-label">Team Peluche</div>
+      <div id="plucheScoreEl" class="score-value">0</div>
+      <div class="score-controls">
+        <button id="plucheMinus" class="score-btn" aria-label="Restar punto a Team Peluche">−</button>
+        <button id="pluchePlus" class="score-btn" aria-label="Sumar punto a Team Peluche">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand-logo">
+    <img src="assets/img/pludy-enemies.png" alt="Pludy Enemies">
+  </div>
+
+  <svg class="burst top-right" viewBox="0 0 220 220" preserveAspectRatio="none">
+    <polygon points="220,0 220,150 190,110 178,175 145,120 128,165 100,105 78,150 62,95 30,130 45,70 10,85 55,30 25,22 100,0"
+      fill="var(--green)"/>
+  </svg>
+  <svg class="burst bottom-left" viewBox="0 0 220 220" preserveAspectRatio="none">
+    <polygon points="220,0 220,150 190,110 178,175 145,120 128,165 100,105 78,150 62,95 30,130 45,70 10,85 55,30 25,22 100,0"
+      fill="var(--green)"/>
+  </svg>
+
+  <div class="done-text">
+    <div id="doneLine1" class="done-line1">¡TIEMPO!</div>
+    <div id="doneLine2" class="done-line2"></div>
+  </div>
+
+  <div class="done-actions">
+    <button id="phaseBtn" class="phase-btn">Pasar a la fase de destrucción</button>
+    <div id="restartHint" class="restart-hint">Toca para volver a empezar</div>
+  </div>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
